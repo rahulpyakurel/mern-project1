@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events</title>
+</head>
+<body>
+    <pre>
+        onclick,onload(when a page is loaded),onblclick,onsubmit(when a form is submitted),
+        onchange(when a input value changes).onkeyup(when a key is pressed),onkeydown,
+        onmouseover(hover over the element),onmouseout(opposite of mouseover), onmousemove,etc
+    </pre>
+    <button onClick = "demoFunction()">click to see the result</button>
+    <h2 id="result"></h2>
+
+    <script>
+        function demoFunction(){
+            // document.write(new Date())
+            document.getElementById('result').innerHTML = new Date()
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map</title> // alternative for map is for each
+</head>
+<body>
+    <script>
+        const numbers = [20,35,15,10,40,50]
+        // numbers.map(demoFunction)
+
+        // function demoFunction(num){
+        //     document.write(`<li>${num}</li>`)
+        // }
+
+        // numbers.map(function(num){
+        //     document.write(`<li> ${num} </li>`)
+        // })
+
+
+        //arrow function
+        numbers.map(num=> {
+            document.write(`<li> ${num} </li>`)
+        })
+    </script>
+</body>
+</html>

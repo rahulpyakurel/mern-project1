@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>arrow function</title>
+  </head>
+  <body>
+    <script>
+      // define the function
+      const demoAdd = (a,b) => (
+         a*b
+        // if single statement no require bracket a*b no need to write return if no curly braces
+      )  
+
+      // call the function
+      let x = demoAdd(5, 10);
+      document.write(`${x}<br>`);
+
+      //define the function newFunc
+      const newFunc= text => ( // no () require for single parameters (text)
+        'hello ' + text
+      )
+
+      // call the function newFunc()
+      let y = newFunc("rahul")
+      document.write(`${y}`)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variable</title>
+</head>
+<body>
+    <pre>
+        variable is used to store values
+        variable can de declared either using var or let (dynamic value) or const value (constant value)
+        default methods , keywords and function must not be used as a variable name 
+
+        to declare a variable use the following example 
+
+        var x = 20
+        here x is a variable name 
+             = means values assign
+             20 is the value (numeric value)
+
+    </pre>
+    <script>
+        var x = 30
+        document.write(x)
+        document.write('<br>')
+        document.write("x")
+        document.write('<br>')
+        document.write(`The value of x is ${x} <br>`) // modern javascript
+        console.log(x)
+
+        var text = "Hello World! 2022"
+        document.write(`${text}<br>`)
+
+        var x = 50 // var can be repeatedly used but let can be used only once 
+        document.write(`${x} <br>`)
+
+        let y = 40 
+        document.write(`${y} <br>`)
+
+        const z = "Rahul Pyakurel"
+        document.write(`${z}<br>`)
+
+        // to check data type use typeof method
+
+        document.write(typeof(z)) // typeof 
+        document.write('<br>')
+        document.write(typeof(y))
+
+        
+
+    </script>
+</body>
+</html>

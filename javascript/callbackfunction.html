@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callback function</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        let news = [
+            {newsTitle:'First Title', content:'First Content of the news'},{newsTitle:'Second Title', content:'Second content of the news'}
+        ]
+
+        //define the function
+        function showNews(){
+            setTimeout(()=>{
+                let result=""
+                news.forEach(post=>{    // no parenthesis () required for post being single parameter
+                    result+=`<li>${post.newsTitle}</li>`
+                })
+                document.querySelector('div').innerHTML = result
+            },2000)
+        }
+
+        // //call the function showNews()
+        // showNews()
+
+        // //define the function addNews()
+        // function addNews(newsdata){ //newsdata ia a variable to store addnews
+        //     setTimeout(()=>{
+        //         news.push(newsdata)
+        //     },3000)
+        // }
+
+        // // call the function addNews()
+        // addNews({newsTitle:'Third Title', content:'This news is added from push method'})
+
+        function addNews(newsdata,callbackFunc){
+            setTimeout(()=>{
+                news.push(newsdata)
+                callbackFunc()
+            },3000)
+        }
+
+        //call the function addNews() with callback function
+        addNews({newsTitle:'Third Title', content:'This news is added from push method'},showNews) //showNews doesnot require (parenthesis) as is a function inside a function
+
+    </script>
+</body>
+</html>

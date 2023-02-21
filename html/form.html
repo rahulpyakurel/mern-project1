@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form action="" method="get" autocomplete="">
+        <label for="firstname">FirstName</label>
+        <br>
+        <input type="text" name="fname" id="firstname" placeholder="Enter your First Name">
+        <br>
+        <label for="lastname">Lastname</label>
+        <br>
+        <input type="text" name="lname" id="lastname" placeholder="Enter your Last Name here">
+        <br>
+        <label for="email">Email</label>
+        <br>
+        <input type="email" name="email" id="email" placeholder="example@email.com">
+        <br>
+        <label>Gender</label>
+        <input type="radio" name="gender" value="male" checked>Male <!--if name is diff in all , all options can be checked-->
+        <input type="radio" name="gender" value="female">Female
+        <input type="radio" name="gender" value="others">Others
+        <br>
+        <label>Subjects (Select any two)</label>
+        <br>
+        <input type="checkbox" name="subjects" value="html">HTML
+        <input type="checkbox" name="subjects" value="css">CSS
+        <input type="checkbox" name="subjects" value="js">JS
+        <input type="checkbox" name="subjects" value="react">React
+        <br>
+        <label for="disctricts">Districts</label>
+        <select name="districts" id="districts">
+            <option value="kathmandu">Kathmandu</option>
+            <option value="kaski">Kaski</option>
+            <option value="dhading">Dhading</option>
+            <option value="rolpa">Rolpa</option>
+            <option value="dolpa">Dolpa</option>
+            <option value="rukum">Rukum</option>
+            <option value="manang">Manang</option>
+            <option value="mustang">Mustang</option>
+        </select>
+        <br>
+        <label for="password">Password</label>
+        <br>
+        <input type="password" name="pass" id="password" placeholder="******" >
+        <br>
+        <input type="submit" value="Send">
+        <input type="reset" value="Reset">
+    </form>   
+</body>
+</html>

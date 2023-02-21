@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>numbermethods</title>
+</head>
+<body>
+    <script>
+        let x = 25.4577345
+        //to show how many digits to be printed after decimal points use toFixed()
+        document.write(`${x.toFixed(2)}<br>`)
+
+        // toPrecision() is used to show how many digits to be printed as a whole
+        document.write(`${x.toPrecision(5)}<br>`)
+
+        //to convert string to number use either 
+        // Number() method
+        //parseInt() method -> returns only integer
+        //parseFloat() method -> returns integer as well as floating number
+
+        let y = "30"
+        let z = "50"
+        let a = Number(y)+Number(z)
+        document.write(`${a}<br>`)
+
+        let b = parseInt("25.9")
+        document.write(`${b}<br>`) // gives 25
+
+        let c = parseFloat("hello")
+        document.write(`${c}<br>`) // gives NaN (as is not a Number)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        let news = [
+            {newsTitle:'First Title', content:'First Content of the news'},{newsTitle:'Second Title', content:'Second content of the news'}
+        ]
+
+        //define the function
+        function showNews(){
+            setTimeout(()=>{
+                let result=""
+                news.forEach(post=>{    // no parenthesis () required for post being single parameter
+                    result+=`<li>${post.newsTitle}</li>`
+                })
+                document.querySelector('div').innerHTML = result
+            },2000)
+        }
+
+        function addNews(newsdata){
+            return new Promise((resolve,reject)=>{ // resolve and reject are two parameters of Promise
+                setTimeout(()=>{
+                    news.push(newsdata)
+
+
+                    const error= false
+                    if(!error){
+                        resolve()
+                    } 
+                    else {
+                        reject('Error:Something went wrong')
+                    }
+                },3000)
+            })
+        }
+
+
+        addNews({newsTitle:'Third Title', content:'This news is added from push method'}) 
+        .then(showNews)
+        .catch((err)=>console.log(err))
+
+    </script>
+</body>
+</html>
